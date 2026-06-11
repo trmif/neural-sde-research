@@ -5,6 +5,6 @@
 
 ## Три независимые исторические ветки
 
-![Three Independent Paths to Modern Generative Models](assets/three_paths_timeline.png)
+![Three Independent Paths to Modern Generative Models](assets/three_paths_timeline.svg)
 
 Все три ветки независимо пришли к одному выводу: оптимальный способ генерировать данные — моделировать их как непрерывный стохастический процесс.
