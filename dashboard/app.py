@@ -4,7 +4,8 @@ import torch.nn as nn
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
-sys.path.append('..')
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.utils import generate_data
 from src.models.eulerSDE import EulerSDE, free_energy
