@@ -255,7 +255,7 @@ with tabs[0]:
         st.pyplot(fig)
 
 
-for tab, (name, domain) in zip(tabs, DOMAINS.items()):
+for tab, (name, domain) in zip(tabs[1:], DOMAINS.items()):
     with tab:
         st.header(name)
         render(domain)
