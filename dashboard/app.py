@@ -135,7 +135,7 @@ if not CACHE.exists() or not list(CACHE.glob("*.npz")):
 tabs = st.tabs([SYNTHETIC_TAB] + list(DOMAINS.keys()))
 
 with tabs[0]:
-    st.header("Synthetic — воспроизводим эксперимент из статьи")
+    st.header("Синтетка: воспроизводим эксперимент из статьи")
     st.markdown("Воспроизводим секцию 6 из статьи на синтетических данных")
 
     col1, col2, col3 = st.columns(3)
