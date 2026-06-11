@@ -1,13 +1,17 @@
-# Neural SDE — Data Science minor @ HSE | 2026
+# Beyond Infinity: Neural SDEs in Practice
+# Higher School of Economics | Data Science Minor | 2026
 # Authors: @trmif | @moriavohus | @rrqwt
-
-# Builds Jupyter Book and deploys to GitHub Pages on push to main.
+#
+# CI/CD pipeline: builds Jupyter Book and deploys to GitHub Pages.
+# Triggers on push to main or manually via workflow_dispatch.
 
 name: deploy
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - miftakhutdinov
   workflow_dispatch:
 
 permissions:
@@ -16,16 +20,18 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
