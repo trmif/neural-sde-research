@@ -1,7 +1,7 @@
 # Эксперименты и выводы
 
 ```{note}
-[Интерактивный дашборд](https://neural-sde-research.streamlit.app/)
+[Интерактивный дашборд](https://neural-sde.streamlit.app/)
 ```
 
 ## 1. Постановка
@@ -54,12 +54,6 @@ $$dX_t = \sigma(A_\text{true} X_t)\,dt + dW_t, \quad X_0 = 0, \quad X_t \in \mat
 ### Результаты
 
 **Ветер:**
-
-| Горизонт | RMSE skill | Coverage80 |
-| -------- | ---------- | ---------- |
-| h=1 ч    | −0.06      | —          |
-| h=6 ч    | +0.18      | —          |
-| h=12 ч   | +0.42      | 0.81\*     |
 
 \*После split-conformal калибровки (Romano et al., 2019).
 

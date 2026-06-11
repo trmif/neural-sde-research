@@ -12,8 +12,7 @@ except NameError:
     BASE = Path.cwd()
 CACHE = BASE / "cache_attempts"
 
-st.set_page_config(page_title="Наши попытки применить Neural SDE",
-                   layout="wide", page_icon="🌀")
+st.set_page_config(page_title="Beyond Infinity: Neural SDEs in Practice", layout="wide", page_icon="🌀")
 
 DOMAINS = {
     "Акции": "stocks",
@@ -133,13 +132,9 @@ if not CACHE.exists() or not list(CACHE.glob("*.npz")):
     st.error("Нет данных в cache_attempts/. Сначала запусти `python prepare_attempts.py`.")
     st.stop()
 
-tabs = st.tabs([SYNTHETIC_TAB] + list(DOMAINS.keys()))
-for tab, (name, domain) in zip(tabs, DOMAINS.items()):
-    with tab:
-        st.header(name)
-        render(domain)
+tabs = st.tabs([SYNTHETIC_TAB]list(DOMAINS.keys()))
 
-with tabs[-1]:
+with tabs[0]:
     st.header("Synthetic — воспроизводим эксперимент из статьи")
     st.markdown("Воспроизводим секцию 6 из статьи на синтетических данных")
 
@@ -259,7 +254,8 @@ with tabs[-1]:
         plt.tight_layout()
         st.pyplot(fig)
 
-st.markdown("---")
-st.caption(
-    "Использование Neural SDE для предсказания временных рядов"
-)
+
+for tab, (name, domain) in zip(tabs, DOMAINS.items()):
+    with tab:
+        st.header(name)
+        render(domain)
