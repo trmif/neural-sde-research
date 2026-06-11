@@ -11,5 +11,5 @@ parts:
         title: "Предпосылки и история"
       - file: docs/03_neural-sde
         title: "Neural SDE"
-      - file: docs/04-experiments
+      - file: docs/04_experiments
         title: "Эксперименты и выводы"
