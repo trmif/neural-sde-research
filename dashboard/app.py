@@ -32,6 +32,8 @@ DOMAINS = {
     "Глюкоза / инсулин": "glucose",
     "Ветрогенерация": "wind",
 }
+SYNTHETIC_TAB = "Синтетика (статья)"
+
 NOTES = {
     "stocks": "Лог-доходности AAPL — почти белый шум: предсказуемого тренда мало, "
               "веер почти плоский. Честная картина того, где SDE не творит чудес.",
@@ -145,7 +147,7 @@ if not CACHE.exists() or not list(CACHE.glob("*.npz")):
     st.error("Нет данных в cache_attempts/. Сначала запусти `python prepare_attempts.py`.")
     st.stop()
 
-tabs = st.tabs(list(DOMAINS.keys()))
+tabs = st.tabs(list(DOMAINS.keys()) + [SYNTHETIC_TAB])
 for tab, (name, domain) in zip(tabs, DOMAINS.items()):
     with tab:
         st.header(name)
