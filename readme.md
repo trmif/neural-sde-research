@@ -1,34 +1,63 @@
-## Что сделано в КТ3
+# Beyond Infinity: Neural SDEs in Practice
 
-- **Новые датасет** — UCI Individual Household Electric Power Consumption и Yahoo Finance (AAPL),
-  почасовые данные 2006–2010, агрегированные в дневные суммы (1433 дня)
-- **Baseline модели** — добавлены ARIMA и SARIMA для честного сравнения с Neural SDE
-- **KL annealing** — обучение коэффициента $\beta$ перед KL-членом:
-  $\beta$ линейно растёт от 0 до 0.05 в течение первых 1500 итераций,
-  что стабилизирует начало обучения
-- **Исправленный ELBO**
+[Тимур Мифтахутдинов](https://github.com/trmif) | [Мария Сухова](https://github.com/moria_vohus) | [Арина Басак](https://github.com/rrqwt)
+
+Что если вместо фиксированного числа слоёв нейросеть имела бы бесконечную глубину? Именно этот вопрос приводит к Neural SDE — стохастическому дифференциальному уравнению где drift и диффузия реализованы нейросетями. Мы взяли теорию Tzen & Raginsky (2019), вышли за пределы синтетических экспериментов и проверили — работает ли это на практике.
+
+## Ссылки
+
+- 📖 [Jupyter Book](https://trmif.github.io/neural-sde-research/)
+- 📊 [Дашборд](https://neural-sde.streamlit.app/)
+- 📄 [Tzen & Raginsky (2019a)](https://arxiv.org/abs/1903.01608)
+- 📄 [Tzen & Raginsky (2019b)](https://arxiv.org/abs/1905.09883)
+
+## Структура репозитория
+
+```
+.
+├── docs/ # Jupyter Book (текст проекта)
+│ ├── assets/ # Картинки и диаграммы
+│ ├── 01_intro.md # Введение и RQ
+│ ├── 02_background.md # Предпосылки и история
+│ ├── 03_neural_sde.md # Как работает Neural SDE
+│ ├── 04_experiments.md # Эксперименты
+│ └── 05_conclusions.md # Выводы
+├── src/ # Имплементация
+│ ├── models/ # Neural SDE, бейзлайны
+│ ├── experiments/ # Ноуты экспериментов
+│ └── notebooks/ # Исследовательские ноутбуки
+├── dashboard/ # Streamlit дашборд
+├── \_config.yml # Конфиг Jupyter Book
+├── \_toc.yml # Оглавление Jupyter Book
+└── requirements.txt # Зависимости
+```
+
+## Воспроизведение
+
+### Установка зависимостей
+
+```bash
+pip install -r requirements.txt
+```
+
+### Запуск экспериментов
+
+> TBD
+
+### Запуск дашборда
+
+```bash
+streamlit run dashboard/app.py
+```
 
 ## Результаты
 
-| Модель     | Датасет     | RMSE   |
-| ---------- | ----------- | ------ |
-| Neural SDE | AAPL (YF)   | 0.019  |
-| ARIMA      | AAPL (YF)   | 0.014  |
-| SARIMA     | AAPL (YF)   | 0.014  |
-| Neural SDE | Electricity | 390.60 |
-| SARIMA     | Electricity | 824.01 |
+> TBD
 
-![Результаты AAPL (YF)](imgs/image1.png)
-![Результаты Electricity](imgs/image2.png)
-
-## Зависимости
-
-```bash
-pip install torch numpy pandas matplotlib scikit-learn statsmodels tqdm ucimlrepo yfinance
-```
-
-## Материалы
-
-- [Tzen & Raginsky (2019) — Latent SDEs](https://arxiv.org/abs/1905.09883)
-- [Проект на GitHub Pages](https://moriavohus.github.io/neural-sde-project/)
-# pzad-project
+<!-- | Модель     | Датасет              | RMSE   |
+| ---------- | -------------------- | ------ |
+| Neural SDE | AAPL (Yahoo Finance) | 0.019  |
+| ARIMA      | AAPL (Yahoo Finance) | 0.014  |
+| SARIMA     | AAPL (Yahoo Finance) | 0.014  |
+| Neural SDE | Electricity (UCI)    | 390.60 |
+| SARIMA     | Electricity (UCI)    | 824.01 | -->
