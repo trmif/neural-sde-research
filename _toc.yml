@@ -3,19 +3,19 @@
 # Authors: @trmif | @moriavohus | @rrqwt
 
 format: jb-book
-root: docs/intro
+root: docs/01_intro
 parts:
   - caption: Содержание
     chapters:
-      - file: docs/motivation
+      - file: docs/02_motivation
         title: "Мотивация"
-      - file: docs/background
+      - file: docs/03_background
         title: "Предпосылки"
-      - file: docs/model
+      - file: docs/04_model
         title: "Модель"
-      - file: docs/math
+      - file: docs/05_math
         title: "Математика"
-      - file: docs/experiments
+      - file: docs/06_experiments
         title: "Эксперименты"
-      - file: docs/connections
+      - file: docs/07_connections
         title: "Связь с диффузионными моделями"
