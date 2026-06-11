@@ -11,6 +11,7 @@ on:
   push:
     branches:
       - main
+      - miftakhutdinov
 
   workflow_dispatch:
 
