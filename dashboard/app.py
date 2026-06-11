@@ -141,17 +141,18 @@ for tab, (name, domain) in zip(tabs, DOMAINS.items()):
 
 with tabs[-1]:
     st.header("Synthetic — воспроизводим эксперимент из статьи")
-    st.markdown(
-        "Воспроизводим секцию 6 из статьи на синтетических данных"
-    )
+    st.markdown("Воспроизводим секцию 6 из статьи на синтетических данных")
 
-    st.sidebar.header("Гиперпараметры (Synthetic)")
-    s_d = st.sidebar.slider("Размерность d", 2, 20, 10, key="s_d")
-    s_n_obs = st.sidebar.slider("Наблюдений", 1000, 10000, 5000, key="s_n_obs")
-    s_n_steps = st.sidebar.slider("Шагов Эйлера", 8, 64, 32, key="s_n_steps")
-    s_n_iters = st.sidebar.slider("Итераций", 100, 2000, 500, key="s_n_iters")
-    s_hidden = st.sidebar.slider("Hidden size", 32, 128, 64, key="s_hidden")
-    s_lr = st.sidebar.select_slider("LR", [1e-4, 3e-4, 1e-3, 3e-3], value=1e-3, key="s_lr")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        s_d = st.slider("Размерность d", 2, 20, 10, key="s_d")
+        s_n_obs = st.slider("Наблюдений", 1000, 10000, 5000, key="s_n_obs")
+    with col2:
+        s_n_steps = st.slider("Шагов Эйлера", 8, 64, 32, key="s_n_steps")
+        s_n_iters = st.slider("Итераций", 100, 2000, 500, key="s_n_iters")
+    with col3:
+        s_hidden = st.slider("Hidden size", 32, 128, 64, key="s_hidden")
+        s_lr = st.select_slider("LR", [1e-4, 3e-4, 1e-3, 3e-3], value=1e-3, key="s_lr")
 
     if st.sidebar.button("Запустить", key="s_run"):
         import torch
