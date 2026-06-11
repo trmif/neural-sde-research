@@ -2,9 +2,7 @@
 
 ### Команда
 
-Тимур Мифтахутдинов | [@trmif](https://github.com/trmif)
-Мария Сухова | [@moria_vohus](https://github.com/moria_vohus)
-Арина Басак | [@rrqwt](https://github.com/rrqwt)
+[Тимур Мифтахутдинов](https://github.com/trmif) | [Мария Сухова](https://github.com/moria_vohus) | [Арина Басак](https://github.com/rrqwt)
 
 ### Мотивация
 
