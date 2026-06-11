@@ -7,9 +7,7 @@ root: docs/01_intro
 parts:
   - caption: Содержание
     chapters:
-      - file: docs/02_motivation
-        title: "Мотивация"
-      - file: docs/03_background
+      - file: docs/02_background
         title: "Предпосылки"
       - file: docs/04_model
         title: "Модель"
