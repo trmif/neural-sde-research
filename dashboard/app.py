@@ -133,7 +133,7 @@ if not CACHE.exists() or not list(CACHE.glob("*.npz")):
     st.error("Нет данных в cache_attempts/. Сначала запусти `python prepare_attempts.py`.")
     st.stop()
 
-tabs = st.tabs(list(DOMAINS.keys()) + [SYNTHETIC_TAB])
+tabs = st.tabs([SYNTHETIC_TAB] + list(DOMAINS.keys()))
 for tab, (name, domain) in zip(tabs, DOMAINS.items()):
     with tab:
         st.header(name)

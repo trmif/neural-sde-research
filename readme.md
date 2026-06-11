@@ -7,7 +7,7 @@
 ## Ссылки
 
 - 📖 [Jupyter Book](https://trmif.github.io/neural-sde-research/)
-- 📊 [Дашборд](https://neural-sde.streamlit.app/)
+- 📊 [Дашборд](https://neural-sde-research.streamlit.app/)
 - 📄 [Tzen & Raginsky (2019a)](https://arxiv.org/abs/1903.01608)
 - 📄 [Tzen & Raginsky (2019b)](https://arxiv.org/abs/1905.09883)
 
@@ -40,24 +40,8 @@
 pip install -r requirements.txt
 ```
 
-### Запуск экспериментов
-
-> TBD
-
 ### Запуск дашборда
 
 ```bash
 streamlit run dashboard/app.py
 ```
-
-## Результаты
-
-> TBD
-
-<!-- | Модель     | Датасет              | RMSE   |
-| ---------- | -------------------- | ------ |
-| Neural SDE | AAPL (Yahoo Finance) | 0.019  |
-| ARIMA      | AAPL (Yahoo Finance) | 0.014  |
-| SARIMA     | AAPL (Yahoo Finance) | 0.014  |
-| Neural SDE | Electricity (UCI)    | 390.60 |
-| SARIMA     | Electricity (UCI)    | 824.01 | -->

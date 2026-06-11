@@ -12,6 +12,4 @@ parts:
       - file: docs/03_neural-sde
         title: "Neural SDE"
       - file: docs/04-experiments
-        title: "Эксперименты"
-      - file: docs/05_conclusions
-        title: "Выводы"
+        title: "Эксперименты и выводы"
