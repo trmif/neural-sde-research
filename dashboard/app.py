@@ -154,7 +154,7 @@ with tabs[-1]:
         s_hidden = st.slider("Hidden size", 32, 128, 64, key="s_hidden")
         s_lr = st.select_slider("LR", [1e-4, 3e-4, 1e-3, 3e-3], value=1e-3, key="s_lr")
 
-    if st.sidebar.button("Запустить", key="s_run"):
+    if st.button("Запустить", key="s_run"):
         import torch
         import torch.nn as nn
         import sys
