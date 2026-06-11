@@ -8,12 +8,10 @@ parts:
   - caption: Содержание
     chapters:
       - file: docs/02_background
-        title: "Предпосылки"
-      - file: docs/04_model
-        title: "Модель"
-      - file: docs/05_math
-        title: "Математика"
-      - file: docs/06_experiments
+        title: "Предпосылки и история"
+      - file: docs/03_neural-sde
+        title: "Neural SDE"
+      - file: docs/04-experiments
         title: "Эксперименты"
-      - file: docs/07_connections
-        title: "Связь с диффузионными моделями"
+      - file: docs/05_conclusions
+        title: "Выводы"
