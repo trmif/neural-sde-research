@@ -20,8 +20,7 @@
 │ ├── 01_intro.md # Введение и RQ
 │ ├── 02_background.md # Предпосылки и история
 │ ├── 03_neural_sde.md # Как работает Neural SDE
-│ ├── 04_experiments.md # Эксперименты
-│ └── 05_conclusions.md # Выводы
+│ ├── 04_experiments.md # Эксперименты и выводы
 ├── src/ # Имплементация
 │ ├── models/ # Neural SDE, бейзлайны
 │ ├── experiments/ # Ноуты экспериментов
