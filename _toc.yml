@@ -1,26 +1,21 @@
-# Neural SDE — Data Science minor @ HSE | 2026
+# Beyond Infinity: Neural SDEs in Practice
+# Data Science minor @ HSE | 2026
 # Authors: @trmif | @moriavohus | @rrqwt
 
 format: jb-book
-root: intro
+root: docs/intro
 parts:
-  - caption: КТ1. Описание проекта
+  - caption: Содержание
     chapters:
-      - file: kt1/task
-        title: "1. Постановка задачи"
-      - file: kt1/ideas
-        title: "2. Ключевые идеи статьи"
-      - file: kt1/goals
-        title: "3. Цели и план проекта"
-  - caption: КТ2. Подходы и данные
-    chapters:
-      - file: kt2/approaches
-        title: "1. Обзор подходов"
-      - file: kt2/data_experiments
-        title: "2. Данные и эксперименты"
-      - file: kt2/math
-        title: "3. Математический аппарат"
-  - caption: КТ4. Дашборд
-    chapters:
-      - file: kt4/dashboard
-        title: "Интерактивный дашборд"
+      - file: docs/motivation
+        title: "Мотивация"
+      - file: docs/background
+        title: "Предпосылки"
+      - file: docs/model
+        title: "Модель"
+      - file: docs/math
+        title: "Математика"
+      - file: docs/experiments
+        title: "Эксперименты"
+      - file: docs/connections
+        title: "Связь с диффузионными моделями"
