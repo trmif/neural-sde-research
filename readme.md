@@ -6,7 +6,7 @@
 
 ## Ссылки
 
-- 📖 [О нашей работе](https://trmif.github.io/neural-sde-research/)
+- 📖 [Отчет](https://trmif.github.io/neural-sde-research/)
 - 📊 [Дашборд](https://neural-sde.streamlit.app/)
 - 📄 [Tzen & Raginsky (2019a)](https://arxiv.org/abs/1903.01608)
 - 📄 [Tzen & Raginsky (2019b)](https://arxiv.org/abs/1905.09883)
